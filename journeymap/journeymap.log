@@ -28,3 +28,18 @@ CoreProperties{state=Valid, file=journeymap.core.config, configVersion=5.8.5, ve
 [12:24:28] [Render thread/INFO] [JourneymapClient] Journeymap PostInit
 [12:24:29] [Render thread/INFO] [ThemeLoader] Preloaded theme textures: 73
 [12:24:29] [Render thread/INFO] [JourneymapClient] postInitialize EXIT, elapsed count 1 avg 421.76ms
+[13:13:00] [Server thread/INFO] [ForgeConfig] Loading JourneyMap Forge Configs
+[13:13:53] [Render thread/WARN] [PropertiesBase] core (Initialized) Bad configField entry during updateFrom(): optionsManagerViewed=null
+[13:13:53] [Render thread/WARN] [PropertiesBase] core (Initialized) Bad configField entry during updateFrom(): splashViewed=null
+[13:13:53] [Render thread/INFO] [ModBlockDelegate] Custom modded block handling enabled for biomesoplenty
+[13:13:53] [Render thread/INFO] [WaypointStore] Loaded 0 waypoints from D:\Programmes\Clients_curseforge\Instances\Bodmayer\journeymap\data\sp\xptdr\waypoints
+[13:13:53] [Render thread/INFO] [JourneymapClient] Mapping started in D:\Programmes\Clients_curseforge\Instances\Bodmayer\journeymap\data\sp\xptdr\overworld. Memory: 3980MB total, 1580MB free 
+[13:14:19] [Render thread/INFO] [ChatLog] 
+[13:41:29] [Render thread/INFO] [JourneymapClient] Mapping halted in D:\Programmes\Clients_curseforge\Instances\Bodmayer\journeymap\data\mp\offline\minecraft:overworld
+[13:41:29] [JM-task-4/WARN] [TaskBatch] TaskBatch thread interrupted: journeymap.client.task.multi.MapPlayerTask$MapPlayerTaskBatch@30bdeb93
+[13:47:08] [Server thread/INFO] [ForgeConfig] Loading JourneyMap Forge Configs
+[13:48:03] [Render thread/WARN] [PropertiesBase] core (Initialized) Bad configField entry during updateFrom(): optionsManagerViewed=null
+[13:48:03] [Render thread/WARN] [PropertiesBase] core (Initialized) Bad configField entry during updateFrom(): splashViewed=null
+[13:48:03] [Render thread/INFO] [WaypointStore] Loaded 0 waypoints from D:\Programmes\Clients_curseforge\Instances\Bodmayer\journeymap\data\sp\xptdr\waypoints
+[13:48:03] [Render thread/INFO] [JourneymapClient] Mapping started in D:\Programmes\Clients_curseforge\Instances\Bodmayer\journeymap\data\sp\xptdr\overworld. Memory: 4608MB total, 769MB free 
+[13:51:15] [Render thread/INFO] [JourneymapClient] Mapping halted in D:\Programmes\Clients_curseforge\Instances\Bodmayer\journeymap\data\mp\offline\minecraft:overworld

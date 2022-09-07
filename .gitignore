@@ -1,3 +1,7 @@
 .curseclient
 saves
 logs
+local
+journeymap/data
+journeymap/icon
+journeymap/server
