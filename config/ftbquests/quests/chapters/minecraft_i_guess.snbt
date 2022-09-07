@@ -3,44 +3,204 @@
 	group: "7E2BC00627CD7FCF"
 	order_index: 0
 	filename: "minecraft_i_guess"
-	title: "Minecraft i guess"
+	title: "Vanilla minecraft i guess"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
 		{
-			x: 2.7755575615628914E-17d
-			y: 2.0d
-			description: [
-				"Bojour"
-				"J'aime la soupe aaaaaaaaaaaaaaaaaaaaaaa nhhu uihfezhfuh huz ifzzf"
-			]
-			dependencies: ["2D1BA1AE3DFC13EF"]
-			id: "6C97B7932175F806"
+			title: "Punch a tree"
+			x: 0.0d
+			y: 0.0d
+			id: "3F063FAB75970D9E"
 			tasks: [{
-				id: "3DBDB52590C71D65"
-				type: "checkmark"
-				title: "Love chickens"
-			}]
-			rewards: [{
-				id: "5CBE161C5CD2B5E9"
+				id: "292887B065ABEBFA"
 				type: "item"
-				item: "mekanismgenerators:solar_panel"
+				title: "Any #minecraft:logs"
+				item: {
+					id: "itemfilters:tag"
+					Count: 1b
+					tag: {
+						value: "minecraft:logs"
+					}
+				}
 			}]
 		}
 		{
-			x: 0.0d
+			title: "Your first crafting table"
+			x: 2.0d
 			y: 0.0d
-			id: "2D1BA1AE3DFC13EF"
+			dependencies: ["3F063FAB75970D9E"]
+			id: "0B2BEC03D687D053"
 			tasks: [{
-				id: "5FB90E4D0399D578"
+				id: "484A9057F1AD62F6"
+				type: "item"
+				item: "minecraft:crafting_table"
+			}]
+		}
+		{
+			title: "Time to mine"
+			x: 4.0d
+			y: 0.0d
+			dependencies: ["0B2BEC03D687D053"]
+			id: "380618CAC4C0D354"
+			tasks: [{
+				id: "30F222F22AFB6971"
 				type: "item"
 				item: {
-					id: "constructionwand:infinity_wand"
+					id: "minecraft:wooden_pickaxe"
 					Count: 1b
 					tag: {
-						wand_options: { }
+						Damage: 0
 					}
 				}
+			}]
+		}
+		{
+			title: "Better Stuff"
+			x: 6.0d
+			y: 0.0d
+			dependencies: ["380618CAC4C0D354"]
+			id: "1366F37687A181A0"
+			tasks: [{
+				id: "5A48B7D3227A92B9"
+				type: "item"
+				item: {
+					id: "minecraft:stone_pickaxe"
+					Count: 1b
+					tag: {
+						Damage: 0
+					}
+				}
+			}]
+		}
+		{
+			title: "Get iron"
+			x: 8.0d
+			y: 0.0d
+			subtitle: "Return mining to get some iron"
+			dependencies: ["1366F37687A181A0"]
+			id: "52E8FDE46CDC3EE6"
+			tasks: [{
+				id: "43532E475EC1BB79"
+				type: "item"
+				item: "minecraft:raw_iron"
+				count: 32L
+			}]
+		}
+		{
+			title: "Get an armor"
+			x: 10.0d
+			y: -1.0d
+			dependencies: ["52E8FDE46CDC3EE6"]
+			id: "127F1222571F8B4D"
+			tasks: [
+				{
+					id: "2E73A4E2571E8E69"
+					type: "item"
+					item: {
+						id: "minecraft:iron_helmet"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "2FCF9199D42B53BA"
+					type: "item"
+					item: {
+						id: "minecraft:iron_chestplate"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "3C141F96696F4B14"
+					type: "item"
+					item: {
+						id: "minecraft:iron_leggings"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "526BF130E6E351F9"
+					type: "item"
+					item: {
+						id: "minecraft:iron_boots"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+		{
+			title: "Better tools"
+			x: 10.0d
+			y: 1.0d
+			dependencies: ["52E8FDE46CDC3EE6"]
+			id: "77A265273CE41331"
+			tasks: [
+				{
+					id: "00EB802ADE7AC880"
+					type: "item"
+					item: {
+						id: "minecraft:iron_sword"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "328D4084B00231C8"
+					type: "item"
+					item: {
+						id: "minecraft:iron_pickaxe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+				{
+					id: "5AFA11DD41B78068"
+					type: "item"
+					item: {
+						id: "minecraft:iron_axe"
+						Count: 1b
+						tag: {
+							Damage: 0
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 12.0d
+			y: 0.0d
+			subtitle: "Explore the mods !"
+			description: [
+				"Bodmayer contains a lot of mods !"
+				"You found 32 irons while mining so you should have the required tools to begin your modded adventure."
+				"I recommend you beginning by Mystical Agriculture but you are free to do what you like."
+				"Good luck !"
+			]
+			dependencies: [
+				"127F1222571F8B4D"
+				"77A265273CE41331"
+			]
+			id: "6EA7C523C9F4D580"
+			tasks: [{
+				id: "396AEA367A5F7E5A"
+				type: "checkmark"
+				title: "Begin exploring the mods"
 			}]
 		}
 	]
