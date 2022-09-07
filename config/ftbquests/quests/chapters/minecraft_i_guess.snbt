@@ -1,0 +1,47 @@
+{
+	id: "7CEA9B97E2B3184A"
+	group: "7E2BC00627CD7FCF"
+	order_index: 0
+	filename: "minecraft_i_guess"
+	title: "Minecraft i guess"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 2.7755575615628914E-17d
+			y: 2.0d
+			description: [
+				"Bojour"
+				"J'aime la soupe aaaaaaaaaaaaaaaaaaaaaaa nhhu uihfezhfuh huz ifzzf"
+			]
+			dependencies: ["2D1BA1AE3DFC13EF"]
+			id: "6C97B7932175F806"
+			tasks: [{
+				id: "3DBDB52590C71D65"
+				type: "checkmark"
+				title: "Love chickens"
+			}]
+			rewards: [{
+				id: "5CBE161C5CD2B5E9"
+				type: "item"
+				item: "mekanismgenerators:solar_panel"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "2D1BA1AE3DFC13EF"
+			tasks: [{
+				id: "5FB90E4D0399D578"
+				type: "item"
+				item: {
+					id: "constructionwand:infinity_wand"
+					Count: 1b
+					tag: {
+						wand_options: { }
+					}
+				}
+			}]
+		}
+	]
+}
