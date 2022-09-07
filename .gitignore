@@ -1,7 +1,9 @@
 .curseclient
+crash-reports
 saves
 logs
 local
 journeymap/data
 journeymap/icon
 journeymap/server
+options.txt
