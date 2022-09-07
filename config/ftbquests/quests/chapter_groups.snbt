@@ -1,3 +1,6 @@
 {
-	chapter_groups: [{ id: "7E2BC00627CD7FCF", title: "Beginning" }]
+	chapter_groups: [
+		{ id: "7E2BC00627CD7FCF", title: "The beginnings" }
+		{ id: "27156BCEA737C493", title: "Agriculture" }
+	]
 }

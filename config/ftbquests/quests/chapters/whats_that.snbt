@@ -1,0 +1,58 @@
+{
+	id: "65EB0E44DDF7DAE9"
+	group: ""
+	order_index: 0
+	filename: "whats_that"
+	title: "What's that ?"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			subtitle: "Welcome"
+			description: [
+				"Welcome to Bodmayer !"
+				"It's a Tech, Magic and Agriculture modpack."
+				"You can either follow this guide or begin your adventure without help, to do that you can press your echap key :) Good luck !"
+				"If you want to follow this quest-book, begin by exploring this page others tips !"
+			]
+			id: "7C37EB0E0E1CC274"
+			tasks: [{
+				id: "6346BB1E16C96D42"
+				type: "checkmark"
+				title: "Welcome"
+			}]
+		}
+		{
+			x: -1.5d
+			y: 1.5d
+			subtitle: "https://discord.gg/fkxXhPKfpS"
+			description: [
+				"You can join the discord by following the link below:"
+				"https://discord.gg/fkxXhPKfpS"
+				"I can't create a link so you need to recopy it !"
+			]
+			dependencies: ["7C37EB0E0E1CC274"]
+			id: "1BF7EF9B622C27C1"
+			tasks: [{
+				id: "640CF579D7C7F872"
+				type: "checkmark"
+				title: "Join the Discord"
+			}]
+		}
+		{
+			x: 1.5d
+			y: 1.5d
+			subtitle: "Begin your adventure !"
+			description: ["You can begin your adventure by following the quests from the first section: The beginnings"]
+			dependencies: ["7C37EB0E0E1CC274"]
+			id: "57FA03587B9F38B1"
+			tasks: [{
+				id: "3DB1986835F9DD19"
+				type: "checkmark"
+				title: "Begin your adventure !"
+			}]
+		}
+	]
+}
