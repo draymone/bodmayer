@@ -1,7 +1,7 @@
 .curseclient
 saves
 logs
-local
+local/*
 journeymap/data
 journeymap/icon
 journeymap/server
