@@ -2,5 +2,7 @@
 	chapter_groups: [
 		{ id: "7E2BC00627CD7FCF", title: "The beginnings" }
 		{ id: "27156BCEA737C493", title: "Agriculture" }
+		{ id: "680921792C980CE7", title: "Tech" }
+		{ id: "0F6A541CF05C8A99", title: "Magic" }
 	]
 }
