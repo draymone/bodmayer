@@ -44,7 +44,6 @@
 		{
 			x: 1.5d
 			y: 1.5d
-			subtitle: "Begin your adventure !"
 			description: ["You can begin your adventure by following the quests from the first section: The beginnings"]
 			dependencies: ["7C37EB0E0E1CC274"]
 			id: "57FA03587B9F38B1"
@@ -52,6 +51,22 @@
 				id: "3DB1986835F9DD19"
 				type: "checkmark"
 				title: "Begin your adventure !"
+			}]
+		}
+		{
+			x: -1.5d
+			y: -1.5d
+			description: [
+				"You can use the FTB Chunks mod to claim your base."
+				"Begin by opening the map using the button in the top left corner of your inventory."
+				"Then open the claimed chunks menu, by left clicking you can claim an area, then by shift + left clicking you can force load it."
+			]
+			dependencies: ["7C37EB0E0E1CC274"]
+			id: "6A96B43F2ED17727"
+			tasks: [{
+				id: "3589F297C586DAD5"
+				type: "checkmark"
+				title: "Claim your base"
 			}]
 		}
 	]
