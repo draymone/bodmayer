@@ -682,5 +682,109 @@
 				title: "Create a Supremium Chesplate with the flight modifier"
 			}]
 		}
+		{
+			x: 2.0d
+			y: 6.0d
+			description: ["You can plant special seeds like Iron Seeds, Diamond Seeds and many more to obtain essence that can be transformed into the material you need."]
+			dependencies: ["0D54A5334BEF9E56"]
+			id: "65C47A6B78E2893D"
+			tasks: [{
+				id: "2D801CDBF48725F3"
+				type: "checkmark"
+				title: "Make special seeds grow"
+			}]
+		}
+		{
+			title: "Growth Accelerators"
+			x: 4.0d
+			y: 6.0d
+			description: [
+				"These will allow to make the plant above growth faster."
+				"Useful when you need to make grow rare seeds."
+			]
+			id: "6570E525FC330620"
+			tasks: [
+				{
+					id: "68F353961C55EB33"
+					type: "item"
+					item: "mysticalagriculture:inferium_growth_accelerator"
+				}
+				{
+					id: "37C02751FFF5D117"
+					type: "item"
+					item: "mysticalagriculture:prudentium_growth_accelerator"
+				}
+				{
+					id: "328368CDA20B0DFB"
+					type: "item"
+					item: "mysticalagriculture:tertium_growth_accelerator"
+				}
+				{
+					id: "710C780FCB569D85"
+					type: "item"
+					item: "mysticalagriculture:imperium_growth_accelerator"
+				}
+				{
+					id: "3195981CA4EFA1D3"
+					type: "item"
+					item: "mysticalagriculture:supremium_growth_accelerator"
+				}
+			]
+		}
+		{
+			x: 6.0d
+			y: 6.0d
+			subtitle: "It's like bone meal but is also effective on essence seeds"
+			id: "78E87F782C6D41A5"
+			tasks: [{
+				id: "780D5DD1BEF7F577"
+				type: "item"
+				item: "mysticalagriculture:mystical_fertilizer"
+			}]
+		}
+		{
+			x: 8.0d
+			y: 6.0d
+			subtitle: "For endless essence infusion"
+			id: "00A1589431A87BA0"
+			tasks: [{
+				id: "18F94768E91B261C"
+				type: "item"
+				item: "mysticalagriculture:master_infusion_crystal"
+			}]
+		}
+		{
+			x: 10.0d
+			y: 6.0d
+			subtitle: "The end-game essence"
+			description: [
+				"The insanium essence is the harder to obtain."
+				"It may be used in end game crafts."
+				"Coming soon !"
+			]
+			id: "127D0408984388EA"
+			tasks: [{
+				id: "502D507ACBCFECB8"
+				type: "item"
+				item: "mysticalagradditions:insanium_essence"
+			}]
+		}
+		{
+			x: -2.0d
+			y: 0.0d
+			subtitle: "Everything you need to know"
+			id: "312D5DD014FD8865"
+			tasks: [{
+				id: "16F454CAEAFA6528"
+				type: "item"
+				item: {
+					id: "patchouli:guide_book"
+					Count: 1b
+					tag: {
+						"patchouli:book": "mysticalagriculture:guide"
+					}
+				}
+			}]
+		}
 	]
 }
