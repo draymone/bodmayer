@@ -464,19 +464,19 @@
 		distribution = "TRAPEZOID"
 		#Chance for ores to not generate, if they are exposed to air. 0 means ignoring air exposure, 1 requires being burried.
 		#Range: 0.0 ~ 1.0
-		air_exposure = 0.5
+		air_exposure = 0
 		#The maximum size of a vein. Set to 0 to disable generation
 		#Range: > 0
-		vein_size = 4
+		vein_size = 0
 		#The minimum Y coordinate this ore can spawn at
 		#Range: > -2147483648
-		min_y = -64
+		min_y = 0
 		#The maximum Y coordinate this ore can spawn at
 		#Range: > -2147483648
-		max_y = -16
+		max_y = 0
 		#The number of veins attempted to be generated per chunk
 		#Range: > 0
-		attempts_per_chunk = 9
+		attempts_per_chunk = 0
 		#Set this to true to allow retro-generation of uranium Ore.
 		retrogen_enable = false
 
