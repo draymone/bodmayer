@@ -69,5 +69,20 @@
 				title: "Claim your base"
 			}]
 		}
+		{
+			x: 1.5d
+			y: -1.5d
+			description: [
+				"Craft an akashic tome by placing a stick in the crafting grid."
+				"It gives you all the mods guide books in one."
+			]
+			dependencies: ["7C37EB0E0E1CC274"]
+			id: "5F286D1563053658"
+			tasks: [{
+				id: "183AA65842F8541B"
+				type: "item"
+				item: "akashictome:tome"
+			}]
+		}
 	]
 }
