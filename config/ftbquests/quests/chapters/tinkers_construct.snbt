@@ -1,0 +1,294 @@
+{
+	id: "2181C5B56968CC9C"
+	group: "680921792C980CE7"
+	order_index: 0
+	filename: "tinkers_construct"
+	title: "Tinker's Construct"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 2.0d
+			y: 0.0d
+			dependencies: ["1F9EB690A0BBB09C"]
+			id: "29929EFC3E04E15D"
+			tasks: [{
+				id: "329CD9D1B22D6D39"
+				type: "item"
+				item: "tconstruct:pattern"
+			}]
+		}
+		{
+			x: 0.0d
+			y: 0.0d
+			description: ["Let's begin without smeltery, this will allow you to make nice early game stuff."]
+			id: "1F9EB690A0BBB09C"
+			tasks: [{
+				id: "47DE435C17E8EF09"
+				type: "checkmark"
+				title: "Basic Tinkering"
+			}]
+		}
+		{
+			x: 4.0d
+			y: 0.0d
+			dependencies: ["29929EFC3E04E15D"]
+			id: "1F383718FD612EC6"
+			tasks: [
+				{
+					id: "40944B8650ABD2F9"
+					type: "item"
+					item: {
+						id: "tconstruct:crafting_station"
+						Count: 1b
+						tag: { }
+					}
+				}
+				{
+					id: "5E3939D342991267"
+					type: "item"
+					item: {
+						id: "tconstruct:part_builder"
+						Count: 1b
+						tag: { }
+					}
+				}
+				{
+					id: "3961BA6047B186F8"
+					type: "item"
+					item: "tconstruct:part_chest"
+				}
+				{
+					id: "5DBB15D1492C9662"
+					type: "item"
+					item: {
+						id: "tconstruct:tinker_station"
+						Count: 1b
+						tag: { }
+					}
+				}
+			]
+		}
+		{
+			title: "Components !"
+			x: 6.0d
+			y: 0.0d
+			dependencies: ["1F383718FD612EC6"]
+			id: "7E7404F071DB4644"
+			tasks: [
+				{
+					id: "70387AD5A3572CAE"
+					type: "item"
+					item: {
+						id: "tconstruct:tool_handle"
+						Count: 1b
+						tag: {
+							Material: "tconstruct:rock#stone"
+						}
+					}
+				}
+				{
+					id: "326A7B16F8737E2E"
+					type: "item"
+					item: {
+						id: "tconstruct:tool_binding"
+						Count: 1b
+						tag: {
+							Material: "tconstruct:rock#stone"
+						}
+					}
+				}
+				{
+					id: "45A2D1F20941F6AB"
+					type: "item"
+					item: {
+						id: "tconstruct:pick_head"
+						Count: 1b
+						tag: {
+							Material: "tconstruct:rock#stone"
+						}
+					}
+				}
+			]
+		}
+		{
+			x: 8.0d
+			y: 0.0d
+			dependencies: ["7E7404F071DB4644"]
+			id: "49DD3BCAB0D356F0"
+			tasks: [{
+				id: "2698498C78985E1A"
+				type: "item"
+				item: {
+					id: "tconstruct:pickaxe"
+					Count: 1b
+					tag: {
+						tic_multipliers: { }
+						tic_stats: {
+							"tconstruct:attack_speed": 1.2f
+							"tconstruct:mining_speed": 4.2f
+							"tconstruct:attack_damage": 1.0f
+							"tconstruct:harvest_tier": "minecraft:stone"
+							"tconstruct:durability": 116.0f
+						}
+						tic_broken: 0b
+						HideFlags: 3
+						tic_modifiers: [
+							{
+								name: "tconstruct:piercing"
+								level: 1s
+							}
+							{
+								name: "tconstruct:stonebound"
+								level: 3s
+							}
+						]
+						Damage: 0
+						tic_materials: [
+							"tconstruct:rock#stone"
+							"tconstruct:rock#stone"
+							"tconstruct:rock#stone"
+						]
+						tic_persistent_data: {
+							abilities: 1
+							upgrades: 3
+						}
+					}
+				}
+			}]
+		}
+		{
+			title: "Early game smeltery"
+			x: 7.0d
+			y: 2.0d
+			description: [
+				"Use these blocks to build your first smeltery !"
+				"{image:kubejs:textures/quests/technology/tinker/early_game_smeltery.png width:100 height:100 align:1}"
+			]
+			dependencies: ["49DD3BCAB0D356F0"]
+			id: "20A6895DD41FB315"
+			tasks: [
+				{
+					id: "5A74A42CE39A3FC0"
+					type: "item"
+					item: "tconstruct:seared_melter"
+				}
+				{
+					id: "203DED600055FEEC"
+					type: "item"
+					item: "tconstruct:seared_faucet"
+				}
+				{
+					id: "24636D99112DE62E"
+					type: "item"
+					item: "tconstruct:seared_fuel_tank"
+				}
+				{
+					id: "0A71941A4FE378B6"
+					type: "item"
+					item: "tconstruct:seared_table"
+				}
+			]
+		}
+		{
+			title: "Smeltery"
+			x: 5.0d
+			y: 2.0d
+			description: [
+				"Begin by making a 3x3 hole with 1 block depth."
+				"Fill it with seared bricks"
+				"You can then place around other seared bricks on the top layer."
+				"And replace a range with your drainer, controller and fuel tank"
+				"Then add a faucet in front of the drainer"
+				"Then break the block below and replace it with your casting table."
+				"The result should be like the image below"
+				"{image:kubejs:textures/quests/technology/tinker/smeltery.png width:100 height:100 align:1}"
+			]
+			dependencies: ["20A6895DD41FB315"]
+			id: "2BE84D9A0C7DAB1A"
+			tasks: [
+				{
+					id: "7E5D3E58A257D708"
+					type: "item"
+					item: "tconstruct:seared_bricks"
+					count: 18L
+				}
+				{
+					id: "4123C28415FEB137"
+					type: "item"
+					item: "tconstruct:seared_fuel_tank"
+				}
+				{
+					id: "3A076198386211D7"
+					type: "item"
+					item: "tconstruct:smeltery_controller"
+				}
+				{
+					id: "692A6F5244A7B741"
+					type: "item"
+					item: "tconstruct:seared_drain"
+				}
+				{
+					id: "0D1216B651A675F8"
+					type: "item"
+					item: "tconstruct:seared_faucet"
+				}
+				{
+					id: "3B76B34B582A9614"
+					type: "item"
+					item: "tconstruct:seared_table"
+				}
+			]
+		}
+		{
+			title: "Basic tinkering"
+			x: 3.0d
+			y: 2.0d
+			description: [
+				"Place a sand casting, right click with a stone pick head then right click a second time"
+				"You can now smelt some materials"
+				"Then click on the faucet and this is going to create a piece of stuff"
+				"You can mix different pieces in the tinker station to create a tool."
+			]
+			dependencies: ["2BE84D9A0C7DAB1A"]
+			id: "11DD9CF4ABCE493E"
+			tasks: [{
+				id: "15605E904675E324"
+				type: "item"
+				item: "tconstruct:blank_sand_cast"
+				count: 3L
+			}]
+		}
+		{
+			x: 1.0d
+			y: 2.0d
+			description: [
+				"Sand castings are one time use"
+				"You can use gold castings which are reusable"
+				"Begin by placing a stone tool piece in the casting table"
+				"Smelt some gold"
+				"Right click on the faucet"
+				"You now have a reusable gold pattern !"
+			]
+			dependencies: ["11DD9CF4ABCE493E"]
+			id: "4DA1F55F436A3C07"
+			tasks: [{
+				id: "2833F45FD64005F9"
+				type: "item"
+				item: "tconstruct:tool_handle_cast"
+			}]
+		}
+		{
+			x: 4.0d
+			y: 4.0d
+			subtitle: "Coming soon !"
+			description: ["WIP"]
+			id: "4BEAAF3FC2D09BE3"
+			tasks: [{
+				id: "4AF10B17158CF7E5"
+				type: "checkmark"
+				title: "Modifiers !"
+			}]
+		}
+	]
+}
