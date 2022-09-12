@@ -3,7 +3,7 @@
 	group: "0F6A541CF05C8A99"
 	order_index: 0
 	filename: "botania"
-	title: "Botania"
+	title: "Botania (WIP)"
 	default_quest_shape: ""
 	default_hide_dependency_lines: false
 	quests: [
@@ -252,6 +252,50 @@
 				id: "6190A068FD913CA8"
 				type: "item"
 				item: "botania:mana_mirror"
+			}]
+		}
+		{
+			x: 18.0d
+			y: 2.0d
+			dependencies: ["7BBB86BA9AABD258"]
+			id: "02B45F9C953DBA98"
+			tasks: [
+				{
+					id: "7B2B4A28A8EB43E3"
+					type: "item"
+					item: "botania:mana_pearl"
+				}
+				{
+					id: "3AB22ECDAB248899"
+					type: "item"
+					item: "botania:mana_diamond"
+				}
+				{
+					id: "026C7AC8835B7B9E"
+					type: "item"
+					item: "botania:mana_string"
+				}
+				{
+					id: "10A84CDCEC0F305C"
+					type: "item"
+					item: "botania:mana_powder"
+				}
+				{
+					id: "14B6D2E6419F406D"
+					type: "item"
+					item: "botania:quartz_mana"
+				}
+			]
+		}
+		{
+			x: 20.0d
+			y: 0.0d
+			dependencies: ["7BBB86BA9AABD258"]
+			id: "63C57115AD112BF0"
+			tasks: [{
+				id: "1E9443AB203A6CAE"
+				type: "checkmark"
+				title: "Coming soon !"
 			}]
 		}
 	]
