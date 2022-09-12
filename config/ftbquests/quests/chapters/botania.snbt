@@ -1,0 +1,258 @@
+{
+	id: "5BB29B0679480177"
+	group: "0F6A541CF05C8A99"
+	order_index: 0
+	filename: "botania"
+	title: "Botania"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 0.0d
+			y: 0.0d
+			id: "2AC4B1AE97FBBB86"
+			tasks: [{
+				id: "6FB034DD9738C252"
+				type: "item"
+				item: "botania:lexicon"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 0.0d
+			description: [
+				"There is 16 flowers named \"Mystical [color] flower\""
+				"One for each minecraft color"
+				"Begin by collecting some of these"
+			]
+			dependencies: ["2AC4B1AE97FBBB86"]
+			id: "19F072BBA8747290"
+			tasks: [{
+				id: "531CE1FF32B15403"
+				type: "checkmark"
+				title: "Find mystical flowers"
+			}]
+		}
+		{
+			x: 2.0d
+			y: 2.0d
+			description: [
+				"You can obtain 2 petals by placing a mystical flower in your crafting grid"
+				"You can burry them by right-clicking on the ground."
+			]
+			dependencies: ["19F072BBA8747290"]
+			id: "00E36F862D97E260"
+			tasks: [{
+				id: "00A7D878D8461CB8"
+				type: "checkmark"
+				title: "Petals !"
+			}]
+		}
+		{
+			x: 1.0d
+			y: 4.0d
+			description: ["You can obtain floral fertilizer with a bone meal and 4 dyes."]
+			dependencies: ["00E36F862D97E260"]
+			id: "53BB1267003BDD30"
+			tasks: [{
+				id: "18D2032EADBF2D33"
+				type: "item"
+				item: "botania:fertilizer"
+			}]
+		}
+		{
+			x: 2.0d
+			y: -2.0d
+			description: [
+				"You can obtain tall flowers by bone mealing a burried petal or a small flower"
+				"These can only be recolted using shears."
+			]
+			dependencies: ["19F072BBA8747290"]
+			id: "126ADE0E03AB4EC0"
+			tasks: [{
+				id: "43788B7B07AB1A61"
+				type: "checkmark"
+				title: "Tall flowers"
+			}]
+		}
+		{
+			x: 3.0d
+			y: 4.0d
+			description: ["If you miss of place in your inventory you can craft a flower pouch to contain all your flowers."]
+			dependencies: ["00E36F862D97E260"]
+			id: "4950B130B691221F"
+			tasks: [{
+				id: "3ABA9CAAD3E06F93"
+				type: "item"
+				item: "botania:flower_bag"
+			}]
+		}
+		{
+			x: 4.0d
+			y: 0.0d
+			subtitle: "Used to crat more flowers !"
+			dependencies: ["19F072BBA8747290"]
+			id: "2584E573FEEA609F"
+			tasks: [{
+				id: "6A493D4DC208F84F"
+				type: "item"
+				item: "botania:apothecary_default"
+			}]
+		}
+		{
+			title: "A beautiful trashcan"
+			x: 4.0d
+			y: 2.0d
+			description: ["By placing a lava bucket in a petal apothecary, it becomes a trashcan destroying items you place inside."]
+			dependencies: ["2584E573FEEA609F"]
+			id: "4132692891877090"
+			tasks: [{
+				id: "4964B61B71BB411D"
+				type: "checkmark"
+				title: "Place a lava bucket in a petal apothecary"
+			}]
+		}
+		{
+			x: 6.0d
+			y: 0.0d
+			description: [
+				"Craft a pure daisy by placing water in a apothecary, dropping 4 white petals and then dropping a wheat seed."
+				"You'll obtain a pure daisy that allow to purify stone and wood like in the image below."
+				"{image:botania:textures/gui/entries/pure_daisy.png width:100 height:100 align:1}"
+			]
+			dependencies: ["2584E573FEEA609F"]
+			id: "2D34031DFDA47E20"
+			tasks: [{
+				id: "625FD877F8855A03"
+				type: "item"
+				item: "botania:pure_daisy"
+			}]
+		}
+		{
+			x: 8.0d
+			y: 0.0d
+			description: ["The log and stone blocks will then be transformed into livingwood and livingrock."]
+			dependencies: ["2D34031DFDA47E20"]
+			id: "55BC64DBF6B1CEDB"
+			tasks: [
+				{
+					id: "0B8AACB6F7F3125B"
+					type: "item"
+					item: "botania:livingwood_log"
+				}
+				{
+					id: "1E71340B02DC7F77"
+					type: "item"
+					item: "botania:livingrock"
+				}
+			]
+		}
+		{
+			x: 10.0d
+			y: 0.0d
+			subtitle: "The wrench of flowers"
+			dependencies: ["55BC64DBF6B1CEDB"]
+			id: "53CDB2C0FB8428C5"
+			tasks: [{
+				id: "285A83376D2B4079"
+				type: "item"
+				item: {
+					id: "botania:twig_wand"
+					Count: 1b
+					tag: {
+						color1: 0
+						color2: 0
+					}
+				}
+			}]
+		}
+		{
+			x: 12.0d
+			y: 0.0d
+			description: ["Allow you to store mana"]
+			dependencies: ["53CDB2C0FB8428C5"]
+			id: "20771886B12BFBAD"
+			tasks: [{
+				id: "23DC65D321769B21"
+				type: "item"
+				item: "botania:mana_pool"
+			}]
+		}
+		{
+			title: "Generating mana"
+			x: 14.0d
+			y: 0.0d
+			description: [
+				"Now you have a mana pool you need to fill it with mana"
+				"The endoflame consumes coal to produce mana"
+			]
+			dependencies: ["20771886B12BFBAD"]
+			id: "5ECC43FEA5AD30CA"
+			tasks: [{
+				id: "0A6122C1F96E066A"
+				type: "item"
+				item: "botania:endoflame"
+			}]
+		}
+		{
+			x: 16.0d
+			y: 0.0d
+			description: [
+				"The mana spreader will spread mana into a mana pool"
+				"Place your mana spreader near the endoflame"
+				"Begin by setting your wand of the forest into the bind mode"
+				"Then shift right-clicking on the mana spreader, and finally shift right-click on the mana pool."
+			]
+			dependencies: ["5ECC43FEA5AD30CA"]
+			id: "1E50D6899EF5AEB7"
+			tasks: [{
+				id: "1C924E07457495E6"
+				type: "item"
+				item: "botania:mana_spreader"
+			}]
+		}
+		{
+			x: 18.0d
+			y: 0.0d
+			description: ["You can throw an iron ingot in a mana pool to transform it into a mansteel ingot."]
+			dependencies: ["1E50D6899EF5AEB7"]
+			id: "7BBB86BA9AABD258"
+			tasks: [{
+				id: "7E689958F321107F"
+				type: "item"
+				item: "botania:manasteel_ingot"
+			}]
+		}
+		{
+			x: 12.0d
+			y: -2.0d
+			description: [
+				"Set your mana pool mode to transfer by shift right-clicking with your wand of the forest"
+				"You can drop your mana tablet to fill it with mana"
+				"By keeping it in your in your inventory you will have mana on you that could be used by your items or armor."
+			]
+			dependencies: ["20771886B12BFBAD"]
+			id: "1CD193875169EDAE"
+			tasks: [{
+				id: "1766EDB77804C05C"
+				type: "item"
+				item: "botania:mana_tablet"
+			}]
+		}
+		{
+			x: 12.0d
+			y: -4.0d
+			description: [
+				"Shift right click on a mana pool to link it with your mana tablet"
+				"It's like a mana tablet but you will not need to refill it when it's empty"
+			]
+			dependencies: ["1CD193875169EDAE"]
+			id: "3512EE66EF312720"
+			tasks: [{
+				id: "6190A068FD913CA8"
+				type: "item"
+				item: "botania:mana_mirror"
+			}]
+		}
+	]
+}
