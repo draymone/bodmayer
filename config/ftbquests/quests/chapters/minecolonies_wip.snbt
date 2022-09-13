@@ -1,0 +1,110 @@
+{
+	id: "65C1A732E2712BD4"
+	group: "680921792C980CE7"
+	order_index: 1
+	filename: "minecolonies_wip"
+	title: "Minecolonies"
+	default_quest_shape: ""
+	default_hide_dependency_lines: false
+	quests: [
+		{
+			x: 2.0d
+			y: 0.0d
+			description: [
+				"Welcome to minecolonies !"
+				"Beggin by placing your supply camp, you can change where you want to place it, and customize it's style."
+				"In this one you'll find a chest containing a town hall and a build tool."
+			]
+			dependencies: ["7E136E92B24EF483"]
+			id: "3FC9B578061781F6"
+			tasks: [
+				{
+					id: "79DFA96DE788F89C"
+					type: "item"
+					item: "minecolonies:supplycampdeployer"
+				}
+				{
+					id: "485EC1471FBB3D28"
+					type: "item"
+					item: "structurize:sceptergold"
+				}
+				{
+					id: "6BF328488CD7550F"
+					type: "item"
+					item: "minecolonies:blockhuttownhall"
+				}
+			]
+		}
+		{
+			x: 0.0d
+			y: 0.0d
+			description: [
+				"Begin by finding a terrain for building your city"
+				"A 8x8 chunks flat terrain is recommend."
+			]
+			id: "7E136E92B24EF483"
+			tasks: [{
+				id: "662650599D652641"
+				type: "checkmark"
+				title: "Finding a terrain"
+			}]
+		}
+		{
+			x: 4.0d
+			y: 0.0d
+			description: [
+				"Place your town hall using your build tool."
+				"This one will be empty because you don't have a buider !"
+			]
+			dependencies: ["3FC9B578061781F6"]
+			id: "35E9CC32455C5228"
+			tasks: [{
+				id: "6C353D5325EF855F"
+				type: "advancement"
+				advancement: "minecolonies:minecolonies/place_townhall"
+				criterion: ""
+			}]
+		}
+		{
+			x: 6.0d
+			y: 0.0d
+			description: ["Craft and place a builder's hut, then hire a builder, tell him to start building the house and gives him materials, wait and you'll have a beautiful builder's hut !"]
+			dependencies: ["35E9CC32455C5228"]
+			id: "7F98FD42E551FE8F"
+			tasks: [{
+				id: "68BC1DEFC3B23CBA"
+				type: "item"
+				item: "minecolonies:blockhutbuilder"
+			}]
+		}
+		{
+			x: 8.0d
+			y: 0.0d
+			description: ["You can now tell your builder to build a tavern so your citizens will be able to sleep, it's important ;p"]
+			dependencies: ["7F98FD42E551FE8F"]
+			id: "6B721D37222AA404"
+			tasks: [{
+				id: "4A2D751A19189744"
+				type: "item"
+				item: "minecolonies:blockhuttavern"
+			}]
+		}
+		{
+			x: 10.0d
+			y: 0.0d
+			description: [
+				"Everytime you finish a building, you have a chat message recommending you what you should do next, these one give some good tips so you should apply them !"
+				"Don't forget to always upgrade your buildings level when you can !"
+				"And you can modify building when it's not destroying the base block, so you have all you need to know to build a beautiful village."
+				"Good luck and have fun !"
+			]
+			dependencies: ["6B721D37222AA404"]
+			id: "18A792F7B3F96F8E"
+			tasks: [{
+				id: "045CD3BB3091290E"
+				type: "checkmark"
+				title: "Continue expanding your village"
+			}]
+		}
+	]
+}
