@@ -8,6 +8,9 @@ onEvent('tags.items', event => {
 
     //Gears
     event.removeAllTagsFrom(['industrialforegoing:iron_gear', 'industrialforegoing:gold_gear', 'industrialforegoing:diamond_gear']);
+
+    //Tin
+    event.removeAllTagsFrom(['mekanism:dust_tin', 'mekanism:ingot_tin', 'mekanism:raw_tin', 'mekanism:nugget_tin', 'mekanism:block_tin', 'mekanism:tin_ore', 'mekanism:deepslate_tin_ore', 'mekanism:block_raw_tin']);
 })
 
 //Remove crafts
@@ -37,5 +40,116 @@ onEvent('recipes', event => {
     event.remove({ id: "create:splashing/immersiveengineering/crushed_uranium_ore" });
 
     //Lead
-    event.remove({output: ['immersiveengineering:nugget_lead', 'mekanism:ingot_lead', 'immersiveengineering:ingot_lead', 'immersiveengineering:storage_lead', 'immersiveengineering:raw_block_lead', 'immersiveengineering:raw_lead', 'immersiveengineering:ore_lead', 'immersiveengineering:plate_lead', 'immersiveengineering:dust_lead', 'mekanism:lead_ore', 'mekanism:dust_lead', 'mekanism:block_lead', 'immersiveengineering:deepslate_ore_lead', 'mekanism:deepslate_lead_ore', 'mekanism:block_raw_lead', 'mekanism:dirty_dust_lead', 'mekanism:nugget_lead', 'mekanism:raw_lead']})
+    event.remove({ output: ['immersiveengineering:nugget_lead', 'mekanism:ingot_lead', 'immersiveengineering:ingot_lead', 'immersiveengineering:storage_lead', 'immersiveengineering:raw_block_lead', 'immersiveengineering:raw_lead', 'immersiveengineering:ore_lead', 'immersiveengineering:plate_lead', 'immersiveengineering:dust_lead', 'mekanism:lead_ore', 'mekanism:dust_lead', 'mekanism:block_lead', 'immersiveengineering:deepslate_ore_lead', 'mekanism:deepslate_lead_ore', 'mekanism:block_raw_lead', 'mekanism:nugget_lead', 'mekanism:raw_lead', 'mekanism:dirty_dust_lead', 'mekanism:block_raw_tin']})
+
+
+    //Tin
+    event.custom({
+        "type": "mekanism:combining",
+        "mainInput": {
+            "amount": 8,
+            "ingredient": {
+                "tag": "forge:raw_materials/tin"
+            }
+        },
+        "extraInput": {
+            "ingredient": {
+                "tag": "forge:cobblestone/normal"
+            }
+        },
+        "output": {
+            "item": "thermal:tin_ore"
+        }
+    });
+    event.custom({
+        "type": "mekanism:combining",
+        "mainInput": {
+            "amount": 8,
+            "ingredient": {
+                "tag": "forge:raw_materials/tin"
+            }
+        },
+        "extraInput": {
+            "ingredient": {
+                "tag": "forge:cobblestone/deepslate"
+            }
+        },
+        "output": {
+            "item": "thermal:deepslate_tin_ore"
+        }
+    });
+    event.custom({
+        "type": "mekanism:crushing",
+        "input": {
+            "ingredient": {
+                "tag": "forge:ingots/tin"
+            }
+        },
+        "output": {
+            "item": "thermal:dust_tin"
+        }
+    });
+    event.custom({
+        "type": "mekanism:enriching",
+        "input": {
+            "ingredient": {
+                "tag": "forge:ores/tin"
+            }
+        },
+        "output": {
+            "item": "thermal:tin_dust",
+            "count": 2
+        }
+    });
+    event.custom({
+        "type": "mekanism:enriching",
+        "input": {
+            "ingredient": {
+                "item": "mekanism:dirty_dust_tin"
+            }
+        },
+        "output": {
+            "item": "thermal:tin_dust",
+            "count": 1
+        }
+    });
+    event.custom({
+        "type": "mekanism:enriching",
+        "input": {
+            "ingredient": {
+                "item": "thermal:raw_tin_block"
+            }
+        },
+        "output": {
+            "item": "thermal:tin_dust",
+            "count": 12
+        }
+    });
+    event.custom({
+        "type": "mekanism:enriching",
+        "input": {
+            "amount": 3,
+            "ingredient": {
+                "item": "thermal:raw_tin"
+            }
+        },
+        "output": {
+            "item": "thermal:tin_dust",
+            "count": 4
+        }
+    });
+    event.custom({
+        "type": "mekanism:crushing",
+        "input": {
+            "ingredient": {
+                "item": "thermal:tin_ingot"
+            }
+        },
+        "output": {
+            "item": "thermal:tin_dust"
+        }
+    });
+    
+    event.remove({ output: ['mekanism:dust_tin', 'mekanism:ingot_tin', 'mekanism:raw_tin', 'mekanism:nugget_tin', 'mekanism:block_tin', 'mekanism:tin_ore', 'mekanism:deepslate_tin_ore', 'mekanism:block_raw_tin']});
+    event.remove( { id: 'thermal:furnace_1686165964'})
 })

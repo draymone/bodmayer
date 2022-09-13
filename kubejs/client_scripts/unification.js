@@ -8,4 +8,7 @@ onEvent('jei.hide.items', event => {
 
     //Gears
     event.hide(['industrialforegoing:iron_gear', 'industrialforegoing:gold_gear', 'industrialforegoing:diamond_gear']);
+
+    //Tin
+    event.hide( ['mekanism:dust_tin', 'mekanism:ingot_tin', 'mekanism:raw_tin', 'mekanism:nugget_tin', 'mekanism:block_tin', 'mekanism:tin_ore', 'mekanism:deepslate_tin_ore', 'mekanism:block_raw_tin']);    
 })
