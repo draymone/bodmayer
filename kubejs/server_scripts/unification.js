@@ -42,6 +42,8 @@ onEvent('recipes', event => {
     //Lead
     event.remove({ output: ['immersiveengineering:nugget_lead', 'mekanism:ingot_lead', 'immersiveengineering:ingot_lead', 'immersiveengineering:storage_lead', 'immersiveengineering:raw_block_lead', 'immersiveengineering:raw_lead', 'immersiveengineering:ore_lead', 'immersiveengineering:plate_lead', 'immersiveengineering:dust_lead', 'mekanism:lead_ore', 'mekanism:dust_lead', 'mekanism:block_lead', 'immersiveengineering:deepslate_ore_lead', 'mekanism:deepslate_lead_ore', 'mekanism:block_raw_lead', 'mekanism:nugget_lead', 'mekanism:raw_lead', 'mekanism:dirty_dust_lead', 'mekanism:block_raw_tin']})
 
+    //Gear
+    event.remove({ output: ['industrialforegoing:gold_gear', 'industrialforegoing:diamond_gear', 'industrialforegoing:iron_gear']})
 
     //Tin
     event.custom({
