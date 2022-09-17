@@ -11,6 +11,14 @@ onEvent('tags.items', event => {
 
     //Tin
     event.removeAllTagsFrom(['mekanism:dust_tin', 'mekanism:ingot_tin', 'mekanism:raw_tin', 'mekanism:nugget_tin', 'mekanism:block_tin', 'mekanism:tin_ore', 'mekanism:deepslate_tin_ore', 'mekanism:block_raw_tin']);
+
+    //Steel
+    event.removeAllTagsFrom(['immersiveengineering:storage_steel', 'immersiveengineering:nugget_steel', 'immersiveengineering:ingot_steel', 'immersiveengineering:dust_steel', 'mekanismtools:steel_boots', 'immersiveengineering:armor_steel_chest', 'immersiveengineering:armor_steel_head', 'immersiveengineering:armor_steel_legs', 'immersiveengineering:armor_steel_feet', 'mekanismtools:steel_helmet', 'mekanismtools:steel_chestplate', 'mekanismtools:steel_leggings', 'mekanismtools:steel_paxel', 'mekanismtools:steel_hoe', 'mekanismtools:steel_sword', 'immersiveengineering:sword_steel', 'immersiveengineering:hoe_steel', 'immersiveengineering:shovel_steel', 'mekanismtools:steel_shovel', 'mekanismtools:steel_axe', 'immersiveengineering:axe_steel', 'immersiveengineering:pickaxe_steel', 'mekanismtools:steel_pickaxe'])
+})
+
+onEvent('tags.blocks', event => {
+    //Steel
+    event.removeAllTagsFrom('immersiveengineering:storage_steel')
 })
 
 //Remove crafts
@@ -40,10 +48,10 @@ onEvent('recipes', event => {
     event.remove({ id: "create:splashing/immersiveengineering/crushed_uranium_ore" });
 
     //Lead
-    event.remove({ output: ['immersiveengineering:nugget_lead', 'mekanism:ingot_lead', 'immersiveengineering:ingot_lead', 'immersiveengineering:storage_lead', 'immersiveengineering:raw_block_lead', 'immersiveengineering:raw_lead', 'immersiveengineering:ore_lead', 'immersiveengineering:plate_lead', 'immersiveengineering:dust_lead', 'mekanism:lead_ore', 'mekanism:dust_lead', 'mekanism:block_lead', 'immersiveengineering:deepslate_ore_lead', 'mekanism:deepslate_lead_ore', 'mekanism:block_raw_lead', 'mekanism:nugget_lead', 'mekanism:raw_lead', 'mekanism:dirty_dust_lead', 'mekanism:block_raw_tin']})
+    event.remove({ output: ['immersiveengineering:nugget_lead', 'mekanism:ingot_lead', 'immersiveengineering:ingot_lead', 'immersiveengineering:storage_lead', 'immersiveengineering:raw_block_lead', 'immersiveengineering:raw_lead', 'immersiveengineering:ore_lead', 'immersiveengineering:plate_lead', 'immersiveengineering:dust_lead', 'mekanism:lead_ore', 'mekanism:dust_lead', 'mekanism:block_lead', 'immersiveengineering:deepslate_ore_lead', 'mekanism:deepslate_lead_ore', 'mekanism:block_raw_lead', 'mekanism:nugget_lead', 'mekanism:raw_lead', 'mekanism:dirty_dust_lead', 'mekanism:block_raw_tin'] })
 
     //Gear
-    event.remove({ output: ['industrialforegoing:gold_gear', 'industrialforegoing:diamond_gear', 'industrialforegoing:iron_gear']})
+    event.remove({ output: ['industrialforegoing:gold_gear', 'industrialforegoing:diamond_gear', 'industrialforegoing:iron_gear'] });
 
     //Tin
     event.custom({
@@ -151,7 +159,22 @@ onEvent('recipes', event => {
             "item": "thermal:tin_dust"
         }
     });
-    
-    event.remove({ output: ['mekanism:dust_tin', 'mekanism:ingot_tin', 'mekanism:raw_tin', 'mekanism:nugget_tin', 'mekanism:block_tin', 'mekanism:tin_ore', 'mekanism:deepslate_tin_ore', 'mekanism:block_raw_tin']});
-    event.remove( { id: 'thermal:furnace_1686165964'})
+    event.remove({ output: ['mekanism:dust_tin', 'mekanism:ingot_tin', 'mekanism:raw_tin', 'mekanism:nugget_tin', 'mekanism:block_tin', 'mekanism:tin_ore', 'mekanism:deepslate_tin_ore', 'mekanism:block_raw_tin'] });
+    event.remove({ id: 'thermal:furnace_1686165964' })
+
+    //Steel
+    event.remove({ output: ['immersiveengineering:sword_steel', 'immersiveengineering:hoe_steel', 'immersiveengineering:shovel_steel', 'mekanismtools:steel_shovel', 'mekanismtools:steel_axe', 'immersiveengineering:axe_steel', 'immersiveengineering:pickaxe_steel', 'mekanismtools:steel_pickaxe', 'mekanismtools:steel_helmet', 'mekanismtools:steel_chestplate', 'mekanismtools:steel_leggings', 'mekanismtools:steel_boots', 'immersiveengineering:armor_steel_feet', 'immersiveengineering:armor_steel_legs', 'immersiveengineering:armor_steel_chest', 'immersiveengineering:armor_steel_head', 'immersiveengineering:storage_steel', 'immersiveengineering:nugget_steel', 'immersiveengineering:ingot_steel', 'immersiveengineering:dust_steel', 'mekanismtools:steel_hoe', 'mekanismtools:steel_paxel', 'mekanismtools:steel_sword'] });
+    event.remove({ input: ['mekanismtools:steel_axe', 'mekanismtools:steel_hoe', 'immersiveengineering:axe_steel', 'immersiveengineering:hoe_steel']})
+    event.remove({ id: 'mekanismtools:steel/nugget_from_blasting' });
+    event.remove({ id: 'mekanismtools:steel/nugget_from_smelting' });
+    event.remove({ id: 'thermalfurnace_1738181022:' });
+    event.remove({ id: 'immersiveengineering:crafting/toolupgrade_revolver_bayonet' });
+    event.shaped('immersiveengineering:toolupgrade_revolver_bayonet', [
+        'WS',
+        'IW'
+    ], {
+        W: 'immersiveengineering:wire_copper',
+        I: 'mekanism:ingot_steel',
+        S: 'mysticalagriculture:tertium_sword'
+    }).id('bodmayer:immersiveengineering/revolver_bayonet');
 })
