@@ -164,7 +164,6 @@ onEvent('recipes', event => {
 
     //Steel
     event.remove({ output: ['immersiveengineering:sword_steel', 'immersiveengineering:hoe_steel', 'immersiveengineering:shovel_steel', 'mekanismtools:steel_shovel', 'mekanismtools:steel_axe', 'immersiveengineering:axe_steel', 'immersiveengineering:pickaxe_steel', 'mekanismtools:steel_pickaxe', 'mekanismtools:steel_helmet', 'mekanismtools:steel_chestplate', 'mekanismtools:steel_leggings', 'mekanismtools:steel_boots', 'immersiveengineering:armor_steel_feet', 'immersiveengineering:armor_steel_legs', 'immersiveengineering:armor_steel_chest', 'immersiveengineering:armor_steel_head', 'immersiveengineering:storage_steel', 'immersiveengineering:nugget_steel', 'immersiveengineering:ingot_steel', 'immersiveengineering:dust_steel', 'mekanismtools:steel_hoe', 'mekanismtools:steel_paxel', 'mekanismtools:steel_sword'] });
-    event.remove({ input: ['mekanismtools:steel_axe', 'mekanismtools:steel_hoe', 'immersiveengineering:axe_steel', 'immersiveengineering:hoe_steel']})
     event.remove({ id: 'mekanismtools:steel/nugget_from_blasting' });
     event.remove({ id: 'mekanismtools:steel/nugget_from_smelting' });
     event.remove({ id: 'thermalfurnace_1738181022:' });
