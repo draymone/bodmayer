@@ -19,3 +19,6 @@ rhino.local.properties
 usercache.json
 usernamecache.json
 patchouli_data.json
+config/jei/world
+servers.dat
+journeymap
