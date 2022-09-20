@@ -13,4 +13,17 @@ onEvent('jei.hide.items', event => {
     
     //Steel
     event.hide(['immersiveengineering:storage_steel', 'immersiveengineering:nugget_steel', 'immersiveengineering:ingot_steel', 'immersiveengineering:dust_steel', 'mekanismtools:steel_boots', 'immersiveengineering:armor_steel_chest', 'immersiveengineering:armor_steel_head', 'immersiveengineering:armor_steel_legs', 'immersiveengineering:armor_steel_feet', 'mekanismtools:steel_helmet', 'mekanismtools:steel_chestplate', 'mekanismtools:steel_leggings', 'mekanismtools:steel_paxel', 'mekanismtools:steel_hoe', 'mekanismtools:steel_sword', 'immersiveengineering:sword_steel', 'immersiveengineering:hoe_steel', 'immersiveengineering:shovel_steel', 'mekanismtools:steel_shovel', 'mekanismtools:steel_axe', 'immersiveengineering:axe_steel', 'immersiveengineering:pickaxe_steel', 'mekanismtools:steel_pickaxe'])
+
+    //Netherite nugget
+    event.hide(['cyclic:netherite_nugget', 'tconstruct:netherite_nugget']);
+
+    //Diamond dust
+    event.hide('thermal:diamond_dust');
+
+    //Iron dust
+    event.hide(['immersiveengineering:dust_iron', 'thermal:iron_dust', 'occultism:iron_dust']);
+
+    //Nickel
+    event.hide(['immersiveengineering:ore_nickel', 'immersiveengineering:deepslate_ore_nickel', 'immersiveengineering:raw_nickel', 'immersiveengineering:raw_block_nickel', 'immersiveengineering:ingot_nickel', 'immersiveengineering:storage_nickel', 'immersiveengineering:slab_storage_nickel', 'immersiveengineering:dust_nickel', 'immersiveengineering:nugget_nickel', 'immersiveengineering:plate_nickel']);
+
 })

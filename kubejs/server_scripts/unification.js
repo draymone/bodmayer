@@ -14,6 +14,18 @@ onEvent('tags.items', event => {
 
     //Steel
     event.removeAllTagsFrom(['immersiveengineering:storage_steel', 'immersiveengineering:nugget_steel', 'immersiveengineering:ingot_steel', 'immersiveengineering:dust_steel', 'mekanismtools:steel_boots', 'immersiveengineering:armor_steel_chest', 'immersiveengineering:armor_steel_head', 'immersiveengineering:armor_steel_legs', 'immersiveengineering:armor_steel_feet', 'mekanismtools:steel_helmet', 'mekanismtools:steel_chestplate', 'mekanismtools:steel_leggings', 'mekanismtools:steel_paxel', 'mekanismtools:steel_hoe', 'mekanismtools:steel_sword', 'immersiveengineering:sword_steel', 'immersiveengineering:hoe_steel', 'immersiveengineering:shovel_steel', 'mekanismtools:steel_shovel', 'mekanismtools:steel_axe', 'immersiveengineering:axe_steel', 'immersiveengineering:pickaxe_steel', 'mekanismtools:steel_pickaxe'])
+
+    //Netherite nugget
+    event.removeAllTagsFrom(['cyclic:netherite_nugget', 'tconstruct:netherite_nugget']);
+
+    //Diamond dust
+    event.removeAllTagsFrom('thermal:diamond_dust');
+
+    //Iron dust
+    event.removeAllTagsFrom(['immersiveengineering:dust_iron', 'thermal:iron_dust', 'occultism:iron_dust']);
+
+    //Nickel
+    event.removeAllTagsFrom(['immersiveengineering:ore_nickel', 'immersiveengineering:deepslate_ore_nickel', 'immersiveengineering:raw_nickel', 'immersiveengineering:raw_block_nickel', 'immersiveengineering:ingot_nickel', 'immersiveengineering:storage_nickel', 'immersiveengineering:slab_storage_nickel', 'immersiveengineering:dust_nickel', 'immersiveengineering:nugget_nickel', 'immersiveengineering:plate_nickel']);
 })
 
 onEvent('tags.blocks', event => {
@@ -70,7 +82,7 @@ onEvent('recipes', event => {
         "output": {
             "item": "thermal:tin_ore"
         }
-    });
+    }).id('bodmayer:thermal/combining/tin_ore');
     event.custom({
         "type": "mekanism:combining",
         "mainInput": {
@@ -87,7 +99,7 @@ onEvent('recipes', event => {
         "output": {
             "item": "thermal:deepslate_tin_ore"
         }
-    });
+    }).id('bodmayer:thermal/combining/deepslate_tin_ore');
     event.custom({
         "type": "mekanism:crushing",
         "input": {
@@ -98,7 +110,7 @@ onEvent('recipes', event => {
         "output": {
             "item": "thermal:dust_tin"
         }
-    });
+    }).id('bodmayer:mekanism/crushing/tin_dust');
     event.custom({
         "type": "mekanism:enriching",
         "input": {
@@ -110,7 +122,7 @@ onEvent('recipes', event => {
             "item": "thermal:tin_dust",
             "count": 2
         }
-    });
+    }).id('bodmayer:mekanism/enriching/tin_dust_from_tin_ore');
     event.custom({
         "type": "mekanism:enriching",
         "input": {
@@ -122,7 +134,7 @@ onEvent('recipes', event => {
             "item": "thermal:tin_dust",
             "count": 1
         }
-    });
+    }).id('bodmayer:mekanism/enriching/tin_dust_from_durty_tin_dust');
     event.custom({
         "type": "mekanism:enriching",
         "input": {
@@ -134,7 +146,7 @@ onEvent('recipes', event => {
             "item": "thermal:tin_dust",
             "count": 12
         }
-    });
+    }).id('bodmayer:mekanism/enriching/tin_dust_from_raw_tin_block');
     event.custom({
         "type": "mekanism:enriching",
         "input": {
@@ -147,7 +159,7 @@ onEvent('recipes', event => {
             "item": "thermal:tin_dust",
             "count": 4
         }
-    });
+    }).id('bodmayer:mekanism/enriching/tin_dust_from_raw_tin');
     event.custom({
         "type": "mekanism:crushing",
         "input": {
@@ -158,7 +170,7 @@ onEvent('recipes', event => {
         "output": {
             "item": "thermal:tin_dust"
         }
-    });
+    }).id('bodmayer:mekanism/crushing/tin_dust_from_tin_ingot');
     event.remove({ output: ['mekanism:dust_tin', 'mekanism:ingot_tin', 'mekanism:raw_tin', 'mekanism:nugget_tin', 'mekanism:block_tin', 'mekanism:tin_ore', 'mekanism:deepslate_tin_ore', 'mekanism:block_raw_tin'] });
     event.remove({ id: 'thermal:furnace_1686165964' })
 
@@ -176,4 +188,149 @@ onEvent('recipes', event => {
         I: 'mekanism:ingot_steel',
         S: 'mysticalagriculture:tertium_sword'
     }).id('bodmayer:immersiveengineering/revolver_bayonet');
+
+    //Netherite nugget
+    event.remove({ id: 'cyclic:netherite_nugget' });
+    event.remove({ id: 'tconstruct:common/materials/netherite_nugget_from_ingot' });
+    event.remove({ id: 'tconstruct:common/materials/netherite_ingot_from_nuggets' });
+
+    //Diamond dust
+    event.remove({ output: 'thermal:diamond_dust' });
+    event.remove({ id: 'thermal:machines/pulverizer/pulverizer_diamond' });
+    event.custom({
+        "type": "thermal:pulverizer",
+        "ingredient": {
+            "tag": "forge:gems/diamond"
+        },
+        "result": [
+            {
+                "item": "mekanism:dust_diamond",
+                "count": 1
+            }
+        ]
+    }).id('bodmayer:thermal/diamond_dust_pulverizer');
+
+    //Iron dust
+    event.custom({
+        "type": "occultism:crushing",
+        "ingredient": {
+            "tag": "forge:ores/iron"
+        },
+        "result": {
+            "item": "mekanism:dust_iron",
+            "count": 2
+        },
+        "crushing_time": 200
+    }).id('bodmayer:occultism/crushing/iron_dust');
+    event.custom({
+        "type": "occultism:crushing",
+        "ingredient": {
+            "tag": "forge:ingots/iron"
+        },
+        "result": {
+            "item": "mekanism:dust_iron",
+            "count": 2
+        },
+        "crushing_time": 200
+    }).id('bodmayer:occultism/crushing/iron_dust_from_ingot');
+    event.custom({
+        "type": "occultism:crushing",
+        "ingredient": {
+            "tag": "forge:raw_ores/iron"
+        },
+        "result": {
+            "item": "mekanism:dust_iron",
+            "count": 2
+        },
+        "crushing_time": 200
+    }).id('bodmayer:occultism/crushing/iron_dust_from_raw');
+
+    event.custom({
+        "type": "thermal:centrifuge",
+        "ingredient": {
+            "tag": "forge:dusts/invar",
+            "count": 3
+        },
+        "result": [
+            {
+                "item": "mekanism:dust_iron",
+                "count": 2
+            },
+            {
+                "item": "thermal:nickel_dust"
+            }
+        ],
+        "energy": 3000
+    }).id('bodmayer:thermal/centrifuge/invar_dust_centrifuge');
+
+    event.custom({
+        "type": "thermal:pulverizer",
+        "ingredient": {
+            "tag": "forge:ingots/iron"
+        },
+        "result": [
+            {
+                "item": "mekanism:dust_iron",
+                "count": 1
+            }
+        ],
+        "energy_mod": 0.5
+    }).id('bodmayer:pulverizer/iron_ingot_pulverize');
+    event.custom({
+        "type": "thermal:pulverizer",
+        "ingredient": {
+            "tag": "forge:ores/iron"
+        },
+        "result": [
+            {
+                "item": "mekanism:dust_iron",
+                "chance": 2.0
+            },
+            {
+                "item": "thermal:nickel_dust",
+                "chance": 0.1
+            },
+            {
+                "item": "minecraft:gravel",
+                "chance": 0.2
+            }
+        ],
+        "experience": 0.2
+    }).id('bodmayer:pulverizer/iron_ore_pulverize');
+    event.custom({
+        "type": "thermal:pulverizer",
+        "ingredient": {
+            "tag": "forge:raw_materials/iron"
+        },
+        "result": [
+            {
+                "item": "mekanism:dust_iron",
+                "chance": 1.25
+            },
+            {
+                "item": "thermal:nickel_dust",
+                "chance": 0.05
+            }
+        ],
+        "experience": 0.1
+    }).id('bodmayer:pulverizer/raw_iron_pulverize');
+
+    event.remove({ output: ['immersiveengineering:dust_iron', 'thermal:iron_dust', 'occultism:iron_dust'] });
+    event.remove({ input: ['immersiveengineering:dust_iron', 'thermal:iron_dust', 'occultism:iron_dust'] });
+    event.remove({ id: 'thermal:machines/pulverizer/pulverizer_iron_ore' });
+    event.remove({ id: 'thermal:machines/pulverizer/pulverizer_raw_iron' });
+    event.remove({ id: 'thermal:machines/pulverizer/pulverizer_iron_ingot_to_dust' });
+    event.remove({ id: 'thermal:machines/centrifuge/centrifuge_invar_dust' });
+    
+    event.remove({ id: 'occultism:blasting/iron_ingot_from_dust'});
+    event.remove({ id: 'occultism:smelting/iron_ingot_from_dust'});
+
+    event.remove({ id: 'bloodmagic:smelting/blasting_ingot_iron'});
+    event.remove({ id: 'bloodmagic:smelting/ingot_iron'});
+    event.remove({ output: 'minecraft:iron_ingot', input: '#forge:dusts/iron'})
+
+    //Nickel
+    event.remove({ output: ['immersiveengineering:dust_nickel', 'immersiveengineering:ore_nickel', 'immersiveengineering:deepslate_ore_nickel', 'immersiveengineering:raw_nickel', 'immersiveengineering:raw_block_nickel', 'immersiveengineering:ingot_nickel', 'immersiveengineering:storage_nickel', 'immersiveengineering:slab_storage_nickel', 'immersiveengineering:nugget_nickel', 'immersiveengineering:plate_nickel']});
+    event.remove({ input: ['immersiveengineering:dust_nickel', 'immersiveengineering:ore_nickel', 'immersiveengineering:deepslate_ore_nickel', 'immersiveengineering:raw_nickel', 'immersiveengineering:raw_block_nickel', 'immersiveengineering:ingot_nickel', 'immersiveengineering:storage_nickel', 'immersiveengineering:slab_storage_nickel', 'immersiveengineering:nugget_nickel', 'immersiveengineering:plate_nickel']});
+
 })
