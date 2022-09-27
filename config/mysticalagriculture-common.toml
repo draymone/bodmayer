@@ -26,7 +26,7 @@
 	#Range: 0.0 ~ 1.0
 	inferiumDropChance = 0.2
 	#Should Supremium Tools be enchantable in an Enchanting Table?
-	enchantableSupremiumTools = false
+	enchantableSupremiumTools = true
 
 #World generation options.
 [World]
