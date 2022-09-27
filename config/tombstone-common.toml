@@ -127,8 +127,8 @@
 	can_replace_grave_plate = true
 	#Allows the merchant grave gardian [false/true|default:true]
 	allow_grave_gardian = true
-	#Time in minutes to check if a soul appears on a grave [30..10000|default:30]
-	#Range: 30 ~ 10000
+	#Time in minutes to check if a soul appears on a grave [1..10000|default:30]
+	#Range: 1 ~ 10000
 	time_soul = 30
 	#Chance on 1000 that a soul appears on a grave [0..1000|default:100]
 	#Range: 0 ~ 1000
